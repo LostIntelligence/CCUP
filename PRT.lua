@@ -2,143 +2,59 @@ local p = peripheral.wrap("top")
 local a = 1
 local ink = 0
 local paper = 0
-local d = [["1. What do kids play when their mom is using the phone? Bored games.
-
-2. What do you call an ant who fights crime? A vigilANTe!
-
-3. Why are snails slow? Because they’re carrying a house on their back.
-
-4. What’s the smartest insect? A spelling bee!
-
-5. What does a storm cloud wear under his raincoat? Thunderwear.
-
-6. What is fast, loud and crunchy? A rocket chip.
-
-7. How does the ocean say hi? It waves!
-
-8. What do you call a couple of chimpanzees sharing an Amazon account? PRIME-mates.
-
-9. Why did the teddy bear say no to dessert? Because she was stuffed.
-
-10. Why did the soccer player take so long to eat dinner? Because he thought he couldn’t use his hands.
-
-11. Name the kind of tree you can hold in your hand? A palm tree!
-
-12. What do birds give out on Halloween? Tweets.
-
-Related: Funny Math Jokes
-
-13. What has ears but cannot hear? A cornfield.
-
-14. What’s a cat’s favorite dessert? A bowl full of mice-cream.
-
-15. Where did the music teacher leave her keys? In the piano!
-
-16. What did the policeman say to his hungry stomach? “Freeze. You’re under a vest.”
-
-17. What did the left eye say to the right eye? Between us, something smells!
-
-18. What do you call a guy who’s really loud? Mike.
-
-19. Why do birds fly south in the winter? It’s faster than walking!
-
-20. What did the lava say to his girlfriend? “I lava you!”
-
-21. Why did the student eat his homework? Because the teacher told him it was a piece of cake.
-
-22. What did Yoda say when he saw himself in 4k? HDMI.
-
-23. Which superhero hits home runs? Batman!
-
-24. What’s Thanos’ favorite app on his phone? Snapchat.
-
-25. Sandy’s mum has four kids; North, West, East. What is the name of the fourth child? Sandy, obviously!
-
-26. What is a room with no walls? A mushroom.
-
-27. Why did the blue jay get in trouble at school? For tweeting on a test!
-
-28. What social events do spiders love to attend? Webbings.
-
-29. What did one pickle say to the other? Dill with it.
-
-30. What is brown, hairy and wears sunglasses? A coconut on vacation.
-
-31. Why is a football stadium always cold? It has lots of fans!
-
-32.  What did one math book say to the other? “I’ve got so many problems.”
-
-33. What did the Dalmatian say after lunch? That hit the spot!
-
-34. What do you call two bananas on the floor? Slippers.
-
-35. Why did the chicken cross the playground? To get to the other slide.
-
-36. Why do ducks have feathers on their tails? To cover their butt quacks.
-
-37. How does a vampire start a letter? “Tomb it may concern…”
-
-38. A plane crashed in the jungle and every single person died. Who survived? Married couples.
-
-39. What kind of math do birds love? Owl-gebra!
-
-40. Why can’t you ever tell a joke around glass? It could crack up.
-
-41. What do you call a Star Wars droid that takes the long way around? R2 detour.
-
-42. How do you stop an astronaut’s baby from crying? You rocket.
-
-43. Why did the scarecrow win a Nobel prize? Because she was outstanding in her field.
-
-44. How do you know when a bike is thinking? You can see their wheels turning.
-
-45. Why was 6 afraid of 7? Because 7,8,9.
-
-46. What goes up and down but doesn’t move? The staircase.
-
-47. What kind of shoes do frogs love? Open-toad!
-
-48. How did the baby tell his mom he had a wet diaper? He sent her a pee-mail.
-
-49. What is a witch’s favorite subject in school? Spelling.
-
-50. What’s brown and sticky? A stick.
-
-51. Why do ducks always pay with cash? Because they always have bills!
-
-52. How did Benjamin Franklin feel holding his kite when he discovered electricity? Shocked!
-
-53. When does a joke become a “dad” joke? When the punchline is a parent.
-
-54. How much did the man sell his dead batteries for? Nothing, they were free of charge!
-
-55. Where do most horses live? In neighhh-borhoods!
-
-56. Why did the Daddy Rabbit go to the barber? He had a lot of little hares.
-
-57. How do you make a lemon drop? Let it fall from the tree.
-
-58. Why can’t you ever trust atoms? Because they make up everything.
-
-59. Which planet loves to sing? Nep-tune!
-
-60. What’s a private investigator’s favorite shoe? Sneak-ers.
-
-61. What did the limestone say to the geologist? Don’t take me for granite!
-
-62. If an electric train is traveling south at 10 miles per hour and the wind is blowing North at 10 miles per hour, which way does the smoke blow? Fooled you! Electric trains don’t blow smoke.
-
-63. Why are basketball courts always wet? Because the players dribble.
-
-64. How do billboards talk? Sign language.
-
-65. What do you call a duck that gets good grades? A wise quacker.
-
-66. What do you call a fish without an eye? A fsh.
-
-67. What kind of keys are sweet? Cookies!
-
-68. What board game does the sky love to play? Twister.]]
+local d = [[+-----------------------+-------+---------+-----------+
+| Material List for placement 'A340-600 Thai'         |
++-----------------------+-------+---------+-----------+
+| Item                  | Total | Missing | Available |
++-----------------------+-------+---------+-----------+
+| Block of Quartz       |  3549 |    3549 |         0 |
+| Smooth Stone Slab     |  3390 |    3390 |         0 |
+| Purple Concrete       |  1336 |    1336 |         0 |
+| Gray Wool             |  1032 |    1032 |         0 |
+| Stone Brick Slab      |   986 |     986 |         0 |
+| Quartz Slab           |   403 |     403 |         0 |
+| Block of Iron         |   298 |     298 |         0 |
+| Sea Lantern           |   236 |     236 |         0 |
+| Block of Coal         |   194 |     194 |         0 |
+| Yellow Terracotta     |   170 |     170 |         0 |
+| Oak Trapdoor          |   123 |     123 |         0 |
+| Purpur Stairs         |   116 |     116 |         0 |
+| White Shulker Box     |    76 |      76 |         0 |
+| Glass                 |    74 |      74 |         0 |
+| Magenta Wool          |    72 |      72 |         0 |
+| Polished Andesite     |    70 |      70 |         0 |
+| Oak Sign              |    65 |      65 |         0 |
+| Cobblestone Wall      |    64 |      64 |         0 |
+| Diorite               |    64 |      64 |         0 |
+| Brick Stairs          |    55 |      55 |         0 |
+| Sandstone Stairs      |    47 |      47 |         0 |
+| Birch Fence Gate      |    34 |      34 |         0 |
+| Andesite              |    24 |      24 |         0 |
+| Furnace               |    22 |      22 |         0 |
+| Bedrock               |    18 |      18 |         0 |
+| Purple Stained Glass  |    18 |      18 |         0 |
+| Birch Door            |    16 |      16 |         0 |
+| Quartz Stairs         |    14 |      14 |         0 |
+| Chiseled Stone Bricks |    12 |      12 |         0 |
+| Red Wool              |    12 |      12 |         0 |
+| Stone Button          |    12 |      12 |         0 |
+| Iron Door             |     9 |       9 |         0 |
+| Block of Lapis Lazuli |     6 |       6 |         0 |
+| Blue Bed              |     6 |       6 |         0 |
+| Pink Terracotta       |     6 |       6 |         0 |
+| Yellow Stained Glass  |     6 |       6 |         0 |
+| Stone Brick Stairs    |     4 |       4 |         0 |
+| End Rod               |     3 |       3 |         0 |
+| Ladder                |     3 |       3 |         0 |
+| Lever                 |     2 |       2 |         0 |
+| Magenta Stained Glass |     2 |       2 |         0 |
+| Redstone Lamp         |     2 |       2 |         0 |
+| Redstone Repeater     |     2 |       2 |         0 |
+| Cobblestone Stairs    |     1 |       1 |         0 |
++-----------------------+-------+---------+-----------+
+| Item                  | Total | Missing | Available |
++-----------------------+-------+---------+-----------+
+]]
 local jf = ""
 local prs = "" 
 local h = 1
