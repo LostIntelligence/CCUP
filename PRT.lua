@@ -62,6 +62,20 @@ local b = 0
 local l = 0 
 local pagenr = 0
 
+-- new check needed for minecraf 1.20 and later --
+while paper == 0 or ink == 0 do
+        print("Please refill ink/paper")
+        print("Waiting 30 seconds")
+        sleep(1)
+        ink = p.getInkLevel()
+        paper = p.getPaperLevel()
+        if paper ~= 0 and ink ~= 0 then
+            term.clear()
+            print("Continuing")
+        end
+    end
+-- new check needed for minecraf 1.20 and later --
+
 l =  string.len(d)
 p.newPage()
 f,g = p.getPageSize()
